@@ -2,9 +2,7 @@
 hw12
 
 # Description
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
+As a developer I want create a app so that a business owner can be able to view and manage the departments, roles, and employees in their company so they can organize and plan business.
 
 # Technologies
 • HTML5 
