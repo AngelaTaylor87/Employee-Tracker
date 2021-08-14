@@ -31,6 +31,30 @@ async function main() {
             const [rows, fields] = await connection.execute('SELECT * FROM `department`');
             console.table(rows);
         }
+        if (answers.action === 'View all roles'){
+            const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
+        if (answers.action === 'View all employees'){
+            const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
+        if (answers.action === 'Add a department'){
+            const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
+        if (answers.action === 'Add a role'){
+            const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
+        if (answers.action === 'Add an employee'){
+            const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
+        if (answers.action === 'Update an employee role'){
+            const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
     } catch (error) {
         console.error(error);
     }
