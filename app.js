@@ -1,5 +1,13 @@
 require('dotenv').config()
 const inquirer = require('inquirer');
+const express = require('express');
+const app = express(); 
+const employee = require('./lib/employee');
+const department = require('./lib/department');
+const role = require('./lib/role');
+
+const PORT = process.env.PORT || 3000;
+
 
 async function main() {
     // get the client
@@ -49,11 +57,15 @@ async function main() {
             console.table(rows);
         }
         if (answers.action === 'Add an employee'){
-            const [rows, fields] = await connection.execute('SELECT * FROM `employee`');
+            const [rows, fields] = await connection.execute('INSERT INTO `employee`');
             console.table(rows);
         }
         if (answers.action === 'Update an employee role'){
             const [rows, fields] = await connection.execute('SELECT * FROM `role`');
+            console.table(rows);
+        }
+        if (answers.action === 'Done'){
+            const [rows, fields] = await connection.execute(' ');
             console.table(rows);
         }
     } catch (error) {
@@ -64,3 +76,4 @@ async function main() {
 
 
 main();
+app.listen(PORT, () => console.log(`lsitening on port ${PORT}`));
